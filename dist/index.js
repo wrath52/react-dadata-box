@@ -46,6 +46,7 @@ var ReactDadata = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReactDadata.__proto__ || Object.getPrototypeOf(ReactDadata)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       query: _this.props.query || '',
+      parts: _this.props.parts || '',
       type: _this.props.type || 'address',
       inputFocused: false,
       showSuggestions: true,
