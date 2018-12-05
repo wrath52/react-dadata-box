@@ -147,6 +147,7 @@ var ReactDadata = function (_React$Component) {
       var _state = this.state,
           suggestionIndex = _state.suggestionIndex,
           query = _state.query,
+          parts = _state.parts,
           inputFocused = _state.inputFocused,
           suggestions = _state.suggestions,
           showSuggestions = _state.showSuggestions,
