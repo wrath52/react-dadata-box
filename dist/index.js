@@ -98,7 +98,7 @@ var ReactDadata = function (_React$Component) {
       _this.xhr.send(JSON.stringify({
         query: _this.state.query,
         count: _this.props.count || 10,
-        parts: _this.props.parts ? [_this.props.parts] || null
+        parts: _this.props.parts ? [_this.props.parts] || ""
       }));
 
       _this.xhr.onreadystatechange = function () {
