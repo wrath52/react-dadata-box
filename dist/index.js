@@ -47,6 +47,7 @@ var ReactDadata = function (_React$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReactDadata.__proto__ || Object.getPrototypeOf(ReactDadata)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       query: _this.props.query || '',
       parts: _this.props.parts || '',
+      qc: _this.props.qc || '',
       type: _this.props.type || 'address',
       inputFocused: false,
       showSuggestions: true,
@@ -111,6 +112,7 @@ var ReactDadata = function (_React$Component) {
               suggestions = _JSON$parse.suggestions;
 
           if (suggestions) {
+            if(_this.props.qc) suggestions = suggestions.filter(a => a.data.qc == _this.props.qc);
             _this.setState({ suggestions: suggestions, suggestionIndex: 0 });
           }
         }
@@ -148,6 +150,7 @@ var ReactDadata = function (_React$Component) {
           suggestionIndex = _state.suggestionIndex,
           query = _state.query,
           parts = _state.parts,
+          qc = _state.qc,
           inputFocused = _state.inputFocused,
           suggestions = _state.suggestions,
           showSuggestions = _state.showSuggestions,
@@ -228,6 +231,7 @@ ReactDadata.propTypes = {
   type: _propTypes2.default.string,
   query: _propTypes2.default.string,
   parts: _propTypes2.default.string,
+  qc: _propTypes2.default.string,
   count: _propTypes2.default.number,
   className: _propTypes2.default.string,
   placeholder: _propTypes2.default.string,
